@@ -1,0 +1,21 @@
+name: LeetCode Sync
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # Runs daily at 1 AM UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Sync LeetCode submissions
+        uses: ShubhamTatvamasi/leetcode-sync@v2.1.2
+        with:
+          LEETCODE_USERNAME: ntAsNHb1tM
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          COMMIT_MESSAGE: "LeetCode sync: update solutions"
+          INCLUDE_PREMIUM: false
+          LOCALE: en
