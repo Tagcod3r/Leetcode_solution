@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: LeetCode Scraper
-        uses: KshitijBarnwal/Leetcode-Questions-Scraper@main
+        uses: KshitijBarnwal/Leetcode-Questions-Scraper@v1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user_name: ntAsNHb1tM
